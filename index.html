@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto+Serif:opsz,wght@8..144,300;8..144,500;8..144,700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Password Generator</h1>
+    <div class="output">
+        <input type="text" id="password" readonly placeholder="Password Generator">
+        <button id="copy">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        <p id="tooltip">Password copied to clipboard!</p>
+    </div>
+    <div class="strength">
+        <span id="passwordStrength">
+            Password strength will be displayed here
+        </span>
+    </div>
+    <div class="length">
+        <label for="length">
+            <p>Password Lenght</p>
+            <span id="lengthValue">12</span>
+        </label>
+        <input type="range" id="length" min="1" max="24" value="12">
+    </div>
+    <div class="options">
+        <label>Lowercase (a-z)
+            <input type="checkbox" id="lowercase" checked/>
+        </label>
+        <label>Uppercase (A-Z)
+            <input type="checkbox" id="uppercase" checked/>
+        </label>
+        <label>Numbers (0-9)
+            <input type="checkbox" id="numbers" checked/>
+        </label>
+        <label>Special characters
+            <input type="checkbox" id="symbols" checked/>
+        </label>
+    </div>
+    <div class="button">
+        <button id="generate">Generate Password</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
